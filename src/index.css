@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-app {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.form-container {
+  border: .5px dotted blue;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  position: relative;
+}
+.option-filter::before {
+  content: 'Filter';
+}
+.form-container::before {
+  content: 'Form belanja';
+}
+.daftar-barang::before {
+  content: 'Daftar-barang';
+} 
+.ringkasan::before {
+  content: 'Ringkasan';
+}
+.form-container::before , .daftar-barang::before,.ringkasan::before, .option-filter::before {
+  position: absolute;
+  top: -10px;
+  font-size: .7rem;
+  left: 10px;
+  background-color: white;
+  color: blue;
+}
+
+.form-container input {
+  flex: 1;
+  outline: none;
+  padding: 5px;
+  border: 0.9px solid rgba(129, 126, 126, 0.212);
+  border-radius: 10px;
+}
+
+.form-container button {
+  background-color: transparent;
+  border: 1.5px solid rgba(129, 126, 126, 0.674);
+  border-radius: 5px;
+}
+
+.option-filter {
+  position: relative;
+  width: 80%;
+  margin: 10px auto;
+  padding: 5px 20px;
+  border: 1.5px dotted blue;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid rgba(145, 146, 146, 0.604);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+.btn.active {
+  /* background-color: aqua; */
+  box-shadow: 0px 0px 2px rgb(0, 255, 64) inset,0px 0px 2px rgb(0, 255, 64);
+}
+.daftar-barang {
+  border: 1px dotted blue;
+  width: 80%;
+  padding: 20px;
+  margin: 10px auto;
+  list-style: none;
+  position: relative;
+}
+
+.daftar-barang li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.463);
+  padding: 10px;
+}
+
+.barang {
+  flex: 1;
+}
+
+.delete {
+  font-size: 1.2rem;
+  padding: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.489);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.barang.done {
+  text-decoration: line-through;
+  color: rgba(128, 128, 128, 0.555);
+}
+
+.ringkasan {
+  border: 1px dotted blue;
+  width: 80%;
+  padding: 0 20px;
+  margin: 0 auto;
+  font-size: .9rem;
+  text-align: center;
+  position: relative;
+}
